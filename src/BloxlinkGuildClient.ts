@@ -38,7 +38,8 @@ export default class BloxlinkGuildClient {
         const apiOptions = options ?? this.options;
 
         const data = await fetch(`https://api.blox.link/v4/public/guilds/${apiOptions.guildId}/update-user/${discordUserId}`, {
-            headers: { Authorization: apiOptions.apiKey, method: "POST" },
+            headers: { Authorization: apiOptions.apiKey },
+            method: "POST",
         }).then(res => res.json() as Promise<UpdateUserGuildAPIResponse>);
 
         return data;
