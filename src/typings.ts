@@ -89,3 +89,7 @@ export type RobloxToDiscordGlobalAPIResponse = {
     discordIDs: string[];
     resolved: Record<string, never>;
 }
+
+export type ErrorAPIResponse = {
+    error: string;
+}

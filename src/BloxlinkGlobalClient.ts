@@ -1,6 +1,7 @@
 import {
     BloxlinkAPIOptions,
     DiscordToRobloxGlobalAPIResponse,
+    ErrorAPIResponse,
     RobloxToDiscordGlobalAPIResponse,
 } from "./typings";
 
@@ -13,22 +14,22 @@ export default class BloxlinkGlobalClient {
         this.options = options;
     }
 
-    async discordToRoblox(discordUserId: string, options?: BloxlinkAPIOptions): Promise<DiscordToRobloxGlobalAPIResponse> {
+    async discordToRoblox(discordUserId: string, options?: BloxlinkAPIOptions): Promise<DiscordToRobloxGlobalAPIResponse | ErrorAPIResponse> {
         const apiOptions = options ?? this.options;
 
         const data = await fetch(`https://api.blox.link/v4/public/discord-to-roblox/${discordUserId}`, {
             headers: { Authorization: apiOptions.apiKey },
-        }).then(res => res.json() as Promise<DiscordToRobloxGlobalAPIResponse>);
+        }).then(res => res.json() as Promise<DiscordToRobloxGlobalAPIResponse | ErrorAPIResponse>);
 
         return data;
     }
 
-    async robloxToDiscord(robloxUserId: string, options?: BloxlinkAPIOptions): Promise<RobloxToDiscordGlobalAPIResponse> {
+    async robloxToDiscord(robloxUserId: string, options?: BloxlinkAPIOptions): Promise<RobloxToDiscordGlobalAPIResponse | ErrorAPIResponse> {
         const apiOptions = options ?? this.options;
 
         const data = await fetch(`https://api.blox.link/v4/public/roblox-to-discord/${robloxUserId}`, {
             headers: { Authorization: apiOptions.apiKey },
-        }).then(res => res.json() as Promise<RobloxToDiscordGlobalAPIResponse>);
+        }).then(res => res.json() as Promise<RobloxToDiscordGlobalAPIResponse | ErrorAPIResponse>);
 
         return data;
     }
