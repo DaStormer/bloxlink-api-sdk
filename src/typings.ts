@@ -8,14 +8,53 @@ export interface BloxlinkGuildAPIOptions extends BloxlinkAPIOptions {
     guildId: string;
 }
 
+export type RobloxGroup = {
+    id: number;
+    name: string;
+    memberCount: number;
+    hasVerifiedBadge: boolean;
+}
+
+export type RobloxRole = {
+    id: number;
+    name: string;
+    rank: number;
+}
+
 export type RobloxUser = {
     name: string;
     id: number;
+    displayName: string;
     description: string;
-    badges: object[];
     isBanned: boolean;
-    groups: object[];
-    avatar: object;
+    created: string;
+    badges: {
+        ImageUri: string;
+        Name: string;
+    }[];
+    profileLink: string;
+    presence: null;
+    groups: {
+        group: RobloxGroup;
+        role: RobloxRole;
+    }[];
+    avatar: {
+        bustThumbnail: string;
+        headshotThumbnail: string;
+        fullBody: string;
+    };
+    rap: null;
+    value: null;
+    placeVisits: null;
+    hasDisplayName: boolean;
+    externalAppDisplayName: null;
+    hasVerifiedBadge: boolean;
+    groupsv2: {
+        [groupId: string]: {
+            group: RobloxGroup;
+            role: RobloxRole;
+        }
+    }[];
 }
 
 export type DiscordToRobloxGuildAPIResponse = {
@@ -29,7 +68,7 @@ export type DiscordToRobloxGuildAPIResponse = {
 export type RobloxToDiscordGuildAPIResponse = {
     discordIDs: string[];
     resolved: {
-        discord?: { [key: string]: APIGuildMember };
+        discord?: { [discordId: string]: APIGuildMember };
     }
 }
 
