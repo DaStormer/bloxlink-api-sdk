@@ -3,6 +3,10 @@
     "version": "1.0.0-dev",
     "description": "Official Node.js API wrapper for interacting with the Bloxlink API.",
     "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "tsc && gen-esm-wrapper . ./dist/index.mjs"
     },
@@ -18,13 +22,13 @@
     },
     "dependencies": {
         "discord-api-types": "^0.37.66",
-        "node-fetch": "^3.3.2"
+        "node-fetch": "^2.7.0"
     },
     "exports": {
         ".": {
-            "require": "./index.js",
+            "require": "./dist/index.js",
             "import": "./dist/index.mjs",
-            "types": "./types/index.d.ts"
+            "types": "./dist/index.d.ts"
         },
         "./": "./"
     },

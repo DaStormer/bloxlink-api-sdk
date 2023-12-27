@@ -5,6 +5,8 @@ import {
     UpdateUserGuildAPIResponse,
 } from "./typings";
 
+const fetch = globalThis.fetch ?? require("node-fetch");
+
 export default class BloxlinkGuildClient {
     options: BloxlinkGuildAPIOptions;
 
