@@ -39,5 +39,6 @@
     },
     "bugs": {
         "url": "https://github.com/DaStormer/bloxlink-api-sdk/issues"
-    }
+    },
+    "keywords": ["bloxlink", "roblox", "discord"]
 }
