@@ -2,10 +2,10 @@
 Official Node.js API wrapper for interacting with the [Bloxlink](https://blox.link/) API.
 
 <p>
-		<a href="https://www.npmjs.com/package/bloxlink-api-sdk"><img src="https://img.shields.io/npm/v/bloxlink-api-sdk.svg?maxAge=3600" alt="npm version" /></a>
-		<a href="https://www.npmjs.com/package/bloxlink-api-sdk"><img src="https://img.shields.io/npm/dt/bloxlink-api-sdk.svg?maxAge=3600" alt="npm downloads" /></a>
-		<a href="https://github.com/DaStormer/bloxlink-api-sdk/actions"><img src="https://github.com/DaStormer/bloxlink-api-sdk/actions/workflows/lint.yml/badge.svg" alt="lint status" /></a>
-    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" /></a>
+	<a href="https://www.npmjs.com/package/bloxlink-api-sdk"><img src="https://img.shields.io/npm/v/bloxlink-api-sdk.svg?logo=npm&color=blue" alt="npm version" /></a>
+	<a href="https://www.npmjs.com/package/bloxlink-api-sdk"><img src="https://img.shields.io/npm/dt/bloxlink-api-sdk.svg" alt="npm downloads" /></a>
+	<a href="https://github.com/DaStormer/bloxlink-api-sdk/actions"><img src="https://github.com/DaStormer/bloxlink-api-sdk/actions/workflows/lint.yml/badge.svg" alt="lint status" /></a>
+	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" /></a>
 </p>
 
 ## About
