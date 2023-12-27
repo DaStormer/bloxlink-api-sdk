@@ -1,0 +1,39 @@
+{
+    "name": "bloxlink-api-sdk",
+    "version": "1.0.0-dev",
+    "description": "Official Node.js API wrapper for interacting with the Bloxlink API.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc && gen-esm-wrapper . ./dist/index.mjs"
+    },
+    "author": "DaStormer",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "@typescript-eslint/eslint-plugin": "^6.16.0",
+        "@typescript-eslint/parser": "^6.16.0",
+        "eslint": "^8.56.0",
+        "gen-esm-wrapper": "^1.1.3",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "discord-api-types": "^0.37.66",
+        "node-fetch": "^3.3.2"
+    },
+    "exports": {
+        ".": {
+            "require": "./index.js",
+            "import": "./dist/index.mjs",
+            "types": "./types/index.d.ts"
+        },
+        "./": "./"
+    },
+    "homepage": "https://github.com/DaStormer/bloxlink-api-sdk/blob/main/README.md",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DaStormer/bloxlink-api-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/DaStormer/bloxlink-api-sdk/issues"
+    }
+}
